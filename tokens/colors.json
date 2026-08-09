@@ -1,0 +1,15 @@
+{
+  "primary":"#2E78D6",
+  "background":"#0F1724",
+  "surface":"#202B3D",
+  "surface-modal":"#2A2530",
+  "success":"#3CCF6E",
+  "warning":"#FFB547",
+  "error":"#EF5350",
+  "text-primary":"#F5F7FA",
+  "text-secondary":"#9AA5B4",
+  "border":"#33415A",
+  "overlay":"rgba(15,23,36,0.72)",
+  "gradient-brand-start":"#FFD24C",
+  "gradient-brand-end":"#E8552A"
+}
