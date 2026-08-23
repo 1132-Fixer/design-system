@@ -1,0 +1,9 @@
+# Brand and design changes require owner review.
+/assets/ @patricktobias86 @high-texas
+/screenshots/ @patricktobias86 @high-texas
+/tokens/ @patricktobias86 @high-texas
+/docs/ @patricktobias86 @high-texas
+/scripts/brand-assets.sh @patricktobias86 @high-texas
+/.github/CODEOWNERS @patricktobias86 @high-texas
+/.github/workflows/brand.yml @patricktobias86 @high-texas
+/.github/workflows/sync-consumers.yml @patricktobias86 @high-texas

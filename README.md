@@ -16,6 +16,8 @@ Start at [`docs/00-overview.md`](docs/00-overview.md) — it has a cross-referen
 
 If you're an AI coding agent, read [`docs/11-ai-rules.md`](docs/11-ai-rules.md) before generating any UI code.
 
+Shipped brand assets are distributed and checked as described in [`docs/12-brand-assets.md`](docs/12-brand-assets.md).
+
 ## Contributing
 
 1. **Extend tokens before adding new ones.** If a value you need is close to an existing token in [`tokens/`](tokens/), use it — don't add a near-duplicate. If nothing fits, add a new token and document its role in the relevant `docs/0X-*.md` file.

@@ -35,6 +35,7 @@ Use this to find what governs a given surface without reading everything:
 - Building the **website** → [`platforms/website.md`](platforms/website.md) plus [`10-marketing.md`](10-marketing.md) for brand-in-marketing rules.
 - Any **color decision** → [`02-colors.md`](02-colors.md) is the only place hex values are stated; everywhere else references token names.
 - Any **accessibility question** → [`09-accessibility.md`](09-accessibility.md), which layers on top of every other doc rather than duplicating it.
+- Shipping or changing a **brand asset** → [`12-brand-assets.md`](12-brand-assets.md) for canonical exports, sync, CI, and review requirements.
 
 ## Source assets
 
