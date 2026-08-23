@@ -19,6 +19,16 @@ Two distinct marks exist. Do not substitute one for the other.
 
 Use for: app icons (Dock, taskbar, Start menu), website favicon/OG images, marketing materials.
 
+> **Windows exports refresh (owner ruling 2026-08-23):** the Windows-facing
+> gear exports (`assets/exports/windows/icon.png`, `icon.ico`,
+> `logo-transparent.png`, `1132-fixer-logo-transparent.png`, and the new
+> in-app header mark `app-mark.png`) were regenerated from the owner's
+> updated transparent gear master (`16.png`, navy gear 1000×1000).
+> `open-source-badge.png` (hex badge shown in the app's trust line) was
+> added the same day from owner-supplied artwork. The people/arrow mark
+> remains exclusively the desktop-shortcut icon
+> (`1132-helper-shortcut.png/.ico`) — never product identity.
+
 - `gear.png` (transparent background) for anything rendering small — Chrome extension icon (16–32px toolbar size), menu-bar/tray glyphs. The full badge's wordmark isn't legible at these sizes.
 - The full 1024×1024 badge for anything requiring the dark rounded-square backing at larger sizes (app store listings, Dock, installer).
 
