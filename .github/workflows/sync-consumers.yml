@@ -40,7 +40,7 @@ jobs:
           permission-pull-requests: write
 
       - name: Check out consumer
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: ${{ github.repository_owner }}/${{ matrix.repository }}
           token: ${{ steps.app-token.outputs.token }}
