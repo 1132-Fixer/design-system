@@ -3,7 +3,7 @@
 1132 Fixer is a **Zoom diagnostic & repair utility**: it checks network/VPN/DNS state, resets Zoom app data, and launches Zoom in a known-good configuration. This design system is the single source of truth for how the brand and UI show up across four surfaces:
 
 - **macOS app** — native window chrome, primary surface today.
-- **Windows app** — Fluent-inspired, ships later.
+- **Windows app** — shipped ([1132-Fixer/windows](https://github.com/1132-Fixer/windows)); compact single-task panel, see [`platforms/windows.md`](platforms/windows.md).
 - **Chrome extension** — companion popup, reuses desktop components.
 - **Website** — marketing + download page, mirrors the product UI.
 

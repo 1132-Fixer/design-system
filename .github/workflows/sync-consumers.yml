@@ -21,7 +21,10 @@ jobs:
       matrix:
         repository:
           - macos
-          - 1132-Fixer-Windows
+          # Canonical repository name; the earlier "1132-Fixer-Windows" entry
+          # made the app-token step fail ("repository does not exist or is
+          # not accessible") on every push since 2026-08-23.
+          - windows
           - chrome
           - website
 
