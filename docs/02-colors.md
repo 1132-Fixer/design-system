@@ -40,6 +40,35 @@ Derive interactive states from base tokens rather than adding new hardcoded colo
 - **Disabled**: `text-secondary` for label, `border` for outline, no fill.
 - **Focus ring**: 2px `primary`, see [`09-accessibility.md`](09-accessibility.md).
 
+## Windows shipped palette
+
+The Windows app ([`platforms/windows.md`](platforms/windows.md)) ships a
+navy-only overlay of this palette, recorded in
+[`../tokens/windows.json`](../tokens/windows.json). It keeps every role above
+but uses two navy surface tiers instead of the plum `surface-modal`, and
+slightly brighter interactive and status values for contrast on the darker
+surfaces. These are the only other hex values allowed outside this file's
+palette table.
+
+| Windows token | Hex | Role |
+|---|---|---|
+| `background` | `#0F1724` | Window background (same as `background`) |
+| `surface` | `#172235` | Panels, summary strips, dialogs |
+| `surface-2` | `#1D2A3F` | Second elevation tier; modal surface on Windows |
+| `surface-hover` / `surface-pressed` | `#243550` / `#293D5B` | Hover and pressed fills |
+| `border` / `border-strong` | `#2B3D57` / `#3B5578` | Dividers, control outlines / emphasis |
+| `text-primary` / `text-secondary` / `text-muted` | `#F5F7FB` / `#A8B5C7` / `#7F8DA1` | Body, secondary, quiet text |
+| `primary` / `primary-hover` / `primary-pressed` | `#337FDB` / `#3B8AE8` / `#286BC2` | Fix now and links |
+| `focus` | `#71AFFF` | Focus ring colour (2px ring on a 2px `background` gap) |
+| `success` / `warning` / `error` | `#2BC66D` / `#F3B84A` / `#F05D67` | Status only |
+| `overlay` | `rgba(15,23,36,0.72)` | Scrim (same as `overlay`) |
+
+Contrast (WCAG 2.x relative luminance): `text-secondary` `#A8B5C7` is 8.6:1
+on `background` and 7.7:1 on `surface`; `text-muted` `#7F8DA1` is 5.3:1 on
+`background` and 4.7:1 on `surface` — all at or above AA (4.5:1) for body
+text. White on `primary` is 4.0:1, so `primary` fills carry 14px/600 labels
+(large-text threshold 3:1) and are never used for body-size regular text.
+
 ## Future light theme
 
 Not planned currently — product ships dark-only. If a light theme is requested later, derive it as a parallel token set (`background-light`, `surface-light`, etc.) rather than replacing dark values.

@@ -5,6 +5,7 @@
 - Minimum window size: 720×640 — below this, card content in `08-components.md` patterns (two-column checklist rows) starts wrapping badly.
 - Default window size: 900×760, matching the proportions in `screenshots/mac/main.png`.
 - Content max-width inside the window: unconstrained — cards stretch to fill available width, unlike the website which caps line length.
+- **Windows exception:** the shipped Windows app is a compact single-task panel — default 520×600, minimum 440×520, one centered column capped at 420px, single-column checklist rows. See [`platforms/windows.md`](platforms/windows.md).
 
 ## Chrome extension
 
