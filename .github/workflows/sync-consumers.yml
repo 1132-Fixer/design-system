@@ -89,8 +89,16 @@ jobs:
           git commit -m "Update design system to ${DESIGN_SYSTEM_SHA:0:12}"
           git push --force-with-lease origin "$branch"
 
-          if gh pr view "$branch" --repo "$REPOSITORY" >/dev/null 2>&1; then
-            gh pr edit "$branch" \
+          # "gh pr view <branch>" also matches a closed or merged pull request
+          # on the same branch. After the first sync pull request merged, this
+          # step therefore retitled that merged pull request
+          # (1132-Fixer/windows#201, rewritten on 2026-09-11 to name a commit it
+          # never contained) and opened nothing, so the pushed submodule bump
+          # stayed on the branch unreviewed. Match open pull requests only.
+          existing=$(gh pr list --repo "$REPOSITORY" --head "$branch" --state open --json number --jq '.[0].number // empty')
+
+          if [[ -n ${existing:-} ]]; then
+            gh pr edit "$existing" \
               --repo "$REPOSITORY" \
               --title "Update design system to ${DESIGN_SYSTEM_SHA:0:12}" \
               --body "Automated design-system submodule and canonical brand asset sync from 1132-Fixer/design-system@$DESIGN_SYSTEM_SHA."
