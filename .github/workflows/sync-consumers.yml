@@ -25,7 +25,9 @@ jobs:
           # made the app-token step fail ("repository does not exist or is
           # not accessible") on every push since 2026-08-23.
           - windows
-          - chrome
+          # Renamed from "chrome" on 2026-09-11 (same repository, id
+          # 1246919604); the app-token step needs the current name.
+          - browser
           - website
 
     steps:
