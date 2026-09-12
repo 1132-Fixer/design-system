@@ -62,6 +62,25 @@ jobs:
           git -C design-system checkout --detach "$DESIGN_SYSTEM_SHA"
           design-system/scripts/brand-assets.sh sync . .brand-assets.tsv
 
+          # Moving the gitlink can invalidate files a consumer keeps in step
+          # with it. 1132-Fixer/windows asserts in its own tests that every
+          # design-system commit it cites equals the gitlink, so a bump alone
+          # left its "Build & Test" red twice: on pull request #219 (ac0f1b1)
+          # and again on main after #221 (793d3cf).
+          #
+          # A consumer that has this problem declares a "design:pin" script.
+          # Run it when it exists and do nothing when it does not. The failure
+          # is deliberately not swallowed: a sync that cannot bring a consumer
+          # to a green state should stop and be seen, not open a pull request
+          # that is known to be red.
+          if [[ -f package.json ]] \
+            && node -e 'const s=(require("./package.json").scripts)||{}; process.exit(s["design:pin"]?0:1)'; then
+            echo "Running the consumer's design:pin hook"
+            npm run design:pin
+          else
+            echo "No design:pin hook in this consumer; nothing to roll"
+          fi
+
       - name: Commit, push, and open or update pull request
         working-directory: consumer
         env:
@@ -86,6 +105,11 @@ jobs:
             [[ -z ${canonical:-} || ${canonical:0:1} == "#" ]] && continue
             git add -- "$target"
           done < .brand-assets.tsv
+          # Whatever the consumer's design:pin hook rewrote. "-u" stages
+          # modifications to tracked files only, so a hook cannot add an
+          # untracked file to this commit; the checkout is clean apart from
+          # this job's own edits.
+          git add -u
           git commit -m "Update design system to ${DESIGN_SYSTEM_SHA:0:12}"
           git push --force-with-lease origin "$branch"
 
