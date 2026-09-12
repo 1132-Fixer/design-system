@@ -73,10 +73,23 @@ jobs:
           # is deliberately not swallowed: a sync that cannot bring a consumer
           # to a green state should stop and be seen, not open a pull request
           # that is known to be red.
+          #
+          # The contract is the script name and one argument, the full 40-hex
+          # design-system commit. Nothing here knows which files a consumer
+          # keeps in step, and nothing here should.
+          #
+          # Passing the SHA is required, not a convenience. At this point the
+          # submodule WORKING TREE is at $DESIGN_SYSTEM_SHA but the superproject
+          # INDEX still records the previous commit, because the gitlink is
+          # staged in the next step. A hook that reads the index sees the old
+          # value: that is how 1132-Fixer/windows#223 was opened with its
+          # gitlink at 08024a1 and its citations rolled to 793d3cf, failing the
+          # consumer's own test on a pull request this workflow had just
+          # "fixed".
           if [[ -f package.json ]] \
             && node -e 'const s=(require("./package.json").scripts)||{}; process.exit(s["design:pin"]?0:1)'; then
-            echo "Running the consumer's design:pin hook"
-            npm run design:pin
+            echo "Running the consumer's design:pin hook for $DESIGN_SYSTEM_SHA"
+            npm run design:pin -- "$DESIGN_SYSTEM_SHA"
           else
             echo "No design:pin hook in this consumer; nothing to roll"
           fi
