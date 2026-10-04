@@ -32,6 +32,7 @@ Use this to find what governs a given surface without reading everything:
 - Building the **macOS app** → [`platforms/macos.md`](platforms/macos.md) for chrome/vibrancy rules, then `08-components.md` for the components themselves.
 - Building the **Windows app** → [`platforms/windows.md`](platforms/windows.md), same pattern.
 - Building the **Chrome extension** → [`platforms/chrome-extension.md`](platforms/chrome-extension.md) for popup constraints, then reuse desktop components as-is unless the platform doc says otherwise.
+- Building **accordions, navigation, forms, tables, or other website elements** → [website component catalog](08-components.md#website-component-catalog) for behavior, states, and accessibility.
 - Building the **website** → [`platforms/website.md`](platforms/website.md) plus [`10-marketing.md`](10-marketing.md) for brand-in-marketing rules.
 - Any **color decision** → [`02-colors.md`](02-colors.md) is the only place hex values are stated; everywhere else references token names.
 - Any **accessibility question** → [`09-accessibility.md`](09-accessibility.md), which layers on top of every other doc rather than duplicating it.
