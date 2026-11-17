@@ -14,7 +14,7 @@ All favicons, app icons, header logos, installer icons, social images, and futur
 
 ## Consumer update automation
 
-`.github/workflows/sync-consumers.yml` runs after each push to `main` and can also be started manually. It pins `macos`, `1132-Fixer-Windows`, `chrome`, and `website` to the triggering design-system commit, synchronizes their mapped assets, and opens or updates an `automation/design-system-sync` pull request. Review and consumer CI remain required before merge.
+`.github/workflows/sync-consumers.yml` runs after each push to `main` and can also be started manually. It pins `browser`, `macos`, `website`, and `windows` to the triggering design-system commit, synchronizes their mapped assets, and opens or updates an `automation/design-system-sync` pull request. Review and consumer CI remain required before merge.
 
 Cross-repository access uses a GitHub App. Install it on this repository and all four consumers with **Contents: read and write** and **Pull requests: read and write**, then configure:
 

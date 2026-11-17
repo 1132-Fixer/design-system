@@ -38,7 +38,7 @@ Derive interactive states from base tokens rather than adding new hardcoded colo
 - **Hover**: `primary` at 90% opacity, or `surface` lightened ~6%.
 - **Pressed**: `primary` at 80% opacity, or `surface` lightened ~3%.
 - **Disabled**: `text-secondary` for label, `border` for outline, no fill.
-- **Focus ring**: 2px `primary`, see [`09-accessibility.md`](09-accessibility.md).
+- **Focus ring**: 2px `focus` where the product's token file defines it (macOS app, Windows app), otherwise 2px `primary` (Chrome extension, website). See [`09-accessibility.md`](09-accessibility.md).
 
 ## Windows shipped palette
 

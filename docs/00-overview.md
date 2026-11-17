@@ -2,10 +2,12 @@
 
 1132 Fixer is a **Zoom diagnostic & repair utility**: it checks network/VPN/DNS state, resets Zoom app data, and launches Zoom in a known-good configuration. This design system is the single source of truth for how the brand and UI show up across four surfaces:
 
-- **macOS app** — native window chrome, primary surface today.
-- **Windows app** — shipped ([1132-Fixer/windows](https://github.com/1132-Fixer/windows)); compact single-task panel, see [`platforms/windows.md`](platforms/windows.md).
-- **Chrome extension** — companion popup, reuses desktop components.
-- **Website** — marketing + download page, mirrors the product UI.
+- **Chrome extension** — popup, see [`platforms/chrome-extension.md`](platforms/chrome-extension.md).
+- **macOS app** — native window chrome, see [`platforms/macos.md`](platforms/macos.md).
+- **Website** — marketing + download page, see [`platforms/website.md`](platforms/website.md).
+- **Windows app** — compact single-task panel, see [`platforms/windows.md`](platforms/windows.md).
+
+The products are equal. This list is in alphabetical order, and no product is the default for another: a value that differs by product lives in that product's token file or platform doc.
 
 ## Who this is for
 
@@ -40,4 +42,4 @@ Use this to find what governs a given surface without reading everything:
 
 ## Source assets
 
-Real brand assets live in `/assets` (app icon, gear mark) and `/screenshots` (shipped macOS UI, used as the reference for current specs in this system). See [`01-brand.md`](01-brand.md) for how to use them.
+Real brand assets live in `/assets` (app icon, gear mark) and `/screenshots` (shipped UI of the macOS app, the website and the Windows app, one folder each, used as the reference for current specs in this system). See [`01-brand.md`](01-brand.md) for how to use them.
