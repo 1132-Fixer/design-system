@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Generated files that products copy byte for byte: always LF in a checkout.
+css/*.css text eol=lf

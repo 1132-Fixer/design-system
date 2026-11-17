@@ -4,6 +4,7 @@
     "background": "#0F1724",
     "surface": "#172235",
     "surface-2": "#1D2A3F",
+    "surface-modal": "#1D2A3F",
     "surface-hover": "#243550",
     "surface-pressed": "#293D5B",
     "border": "#2B3D57",

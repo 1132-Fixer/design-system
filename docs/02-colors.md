@@ -54,7 +54,8 @@ palette table.
 |---|---|---|
 | `background` | `#0F1724` | Window background (same as `background`) |
 | `surface` | `#172235` | Panels, summary strips, dialogs |
-| `surface-2` | `#1D2A3F` | Second elevation tier; modal surface on Windows |
+| `surface-2` | `#1D2A3F` | Second elevation tier |
+| `surface-modal` | `#1D2A3F` | Modal surface. On Windows it has the `surface-2` value, so the plum base value never reaches the Windows app |
 | `surface-hover` / `surface-pressed` | `#243550` / `#293D5B` | Hover and pressed fills |
 | `border` / `border-strong` | `#2B3D57` / `#3B5578` | Dividers, control outlines / emphasis |
 | `text-primary` / `text-secondary` / `text-muted` | `#F5F7FB` / `#A8B5C7` / `#7F8DA1` | Body, secondary, quiet text |

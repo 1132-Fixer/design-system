@@ -1,0 +1,5 @@
+{
+  "fast": { "duration": 150, "easing": "ease-out" },
+  "base": { "duration": 200, "easing": "ease-in-out" },
+  "slow": { "duration": 250, "easing": "ease-in-out" }
+}
