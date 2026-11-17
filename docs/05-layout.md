@@ -1,6 +1,10 @@
 # Layout
 
-## Desktop apps (Windows / macOS)
+## Desktop apps
+
+Each desktop app has its own window model. Neither one is the default for the other; the values are in `tokens/macos.json` and `tokens/windows.json` (`window`).
+
+### macOS app
 
 - Minimum window size: 720×640 — below this, card content in `08-components.md` patterns (two-column checklist rows) starts wrapping badly.
 - Default window size: 900×760, matching the proportions in `screenshots/mac/main.png`.
@@ -10,7 +14,10 @@
   - Summary header and persistent primary action bar remain pinned/usable while the central repair record scrolls.
   - Responsive repair-record rows: at content width `840pt` or wider, rows align 4 columns (`sequence`, `operation`, `effect`, `outcome`); below `840pt`, the `effect` description stacks below `operation` while retaining a trailing `outcome` column.
   - Record rows have a `44pt` minimum height (growing with content), square corners (`0pt` radius) separated by `1pt` `border` rules, and interactive controls use `6pt` corner radius. Native sheets retain native macOS framing.
-- **Windows exception:** the shipped Windows app is a compact single-task panel — default 520×600, minimum 440×520, one centered column capped at 420px, single-column checklist rows. See [`platforms/windows.md`](platforms/windows.md).
+
+### Windows app
+
+- Compact single-task panel: default 520×600, minimum 440×520, one centered column capped at 420px, single-column checklist rows. See [`platforms/windows.md`](platforms/windows.md).
 
 ## Chrome extension
 

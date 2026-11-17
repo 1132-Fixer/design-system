@@ -3,10 +3,12 @@
 
 A complete cross-platform design system for:
 
-- macOS
-- Windows
 - Chrome Extension
+- macOS
 - Website
+- Windows
+
+The products are equal; the list is in alphabetical order.
 
 This repository is the single source of truth for designers, developers and AI coding agents. 1132 Fixer is a Zoom diagnostic & repair utility — dark theme only.
 
