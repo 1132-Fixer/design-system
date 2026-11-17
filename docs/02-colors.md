@@ -15,6 +15,7 @@ Dark theme only — 1132 Fixer does not support a light theme. All values live i
 | `error` | `#EF5350` | Failed checks, "unsupported" tags, destructive actions |
 | `text-primary` | `#F5F7FA` | Primary text on `background`/`surface` |
 | `text-secondary` | `#9AA5B4` | Secondary/muted text, captions, placeholders |
+| `text-on-primary` | `#FFFFFF` | Label or glyph on a `primary` or status fill |
 | `border` | `#33415A` | Card/input borders, dividers |
 | `overlay` | `rgba(15,23,36,0.72)` | Scrim behind modals |
 | `gradient-brand-start` / `gradient-brand-end` | `#FFD24C` / `#E8552A` | Logo wordmark gradient — logo/icon use only, never UI |
@@ -63,6 +64,14 @@ palette table.
 | `focus` | `#71AFFF` | Focus ring colour (2px ring on a 2px `background` gap) |
 | `success` / `warning` / `error` | `#2BC66D` / `#F3B84A` / `#F05D67` | Status only |
 | `overlay` | `rgba(15,23,36,0.72)` | Scrim (same as `overlay`) |
+| `explore-accent` / `explore-accent-text` | `#3A82F7` / `#8FB6F5` | Explore dialog only: hero outline and glow, badge text |
+| `explore-hero-start` / `explore-hero-end` / `explore-hero-text` | `#1F2E4C` / `#1B2740` / `#A9BEDE` | Explore dialog only: hero fill (top to bottom) and its description text |
+| `explore-violet` / `explore-purple` | `#7C6BF0` / `#A855D6` | Explore dialog only: edge colour of the second and third destination rows |
+| `explore-border` | `rgba(122,148,190,0.34)` | Explore dialog only: card outline |
+
+The `explore-*` values record what the Windows app ships in one dialog. Do not
+use them for a new surface. A tint of a token (for example a hover fill) is
+mixed from the token in the stylesheet with `color-mix`; it is not a token.
 
 Contrast (WCAG 2.x relative luminance): `text-secondary` `#A8B5C7` is 8.6:1
 on `background` and 7.7:1 on `surface`; `text-muted` `#7F8DA1` is 5.3:1 on
