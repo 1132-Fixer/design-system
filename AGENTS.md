@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This repo is a design system, not an app — no build/test/lint commands exist. Your job here is almost always reading or editing docs and tokens.
+This repo is a design system, not an app. It has one command: `node scripts/build-css.mjs` writes `css/tokens.<product>.css` from `tokens/*.json` (`--check` fails when a file is out of date; CI runs it). Never edit `css/` by hand; see [`docs/13-css-tokens.md`](docs/13-css-tokens.md). Your job here is almost always reading or editing docs and tokens.
 
 ## Start here
 

@@ -4,6 +4,7 @@
     "background": "#0F1724",
     "surface": "#172235",
     "surface-2": "#1D2A3F",
+    "surface-modal": "#1D2A3F",
     "surface-hover": "#243550",
     "surface-pressed": "#293D5B",
     "border": "#2B3D57",
@@ -22,5 +23,5 @@
   },
   "radius": { "control": 10, "card": 14, "modal": 18, "pill": 999 },
   "spacing": { "4": 4, "8": 8, "12": 12, "16": 16, "20": 20, "24": 24, "32": 32, "40": 40 },
-  "window": { "default": [520, 600], "minimum": [440, 520], "header": 56, "footer": 48, "contentMaxWidth": 420 }
+  "window": { "default": [520, 600], "minimum": [440, 520], "header": 104, "headerMark": 80, "footer": 48, "contentMaxWidth": 420 }
 }

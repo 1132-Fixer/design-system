@@ -18,3 +18,5 @@ jobs:
           test -s assets/1132-Fixer-App-Icon-1024x1024@1x.png
           test -s assets/gear.png
           bash -n scripts/brand-assets.sh
+      - name: Check generated CSS tokens
+        run: node scripts/build-css.mjs --check

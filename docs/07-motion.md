@@ -12,6 +12,8 @@
 | `base` | 200ms | ease-in-out | Panel/card transitions, modal open/close |
 | `slow` | 250ms | ease-in-out | Full-screen state changes (e.g. entering a results view) |
 
+The values are in [`../tokens/motion.json`](../tokens/motion.json); this table states their use.
+
 All durations sit within the product's 150–250ms range — nothing should animate slower than 250ms.
 
 ## Rules

@@ -23,10 +23,14 @@ mocked IPC layer, 520×600 at 100 %): [`../../screenshots/windows/ready.png`](..
   This is deliberately smaller than the desktop default in
   [`../05-layout.md`](../05-layout.md): the app is a single-task utility, not a
   dashboard, and the compact panel replaced the earlier card layout.
-- No Win32 titlebar and no custom minimize/maximize row. One **56px app
+- No Win32 titlebar and no custom minimize/maximize row. One **104px app
   header** in every state: a Back action on the left (Details view only), the
-  product mark (44px, `assets/brand/app-mark.png`) absolutely centered against
+  product mark (80px, `assets/brand/app-mark.png`) absolutely centered against
   the full window width, Exit on the right. The header row is the drag region.
+  These are the shipped values since the landing rebalance of 2026-09-05
+  (`window.header` and `window.headerMark` in `tokens/windows.json`). The
+  reference renders above were made before that change and show the earlier
+  56px header with a 44px mark.
 - One **48px footer** in every state: version and the exact independence line
   on the left, Support · Feedback · About on the right. Explore is reachable
   only from the About dialog.
