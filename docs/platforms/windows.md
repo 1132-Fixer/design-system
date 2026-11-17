@@ -68,7 +68,19 @@ names below are the Windows overlay keys.
 - Spacing: the shared scale plus `20` and `40`, used only by the Explore and
   feedback dialogs (the compact panel itself uses 4/8/12/16/24/32).
 
+## Shadows (Windows overlay)
+
+Four shadow tokens, each one layer with no horizontal offset:
+`shadow.sm` (`0 6 14`), `shadow.md` (`0 10 22`), `shadow.lg` (`0 14 28`) for
+raised controls and panels, and `shadow.dialog` (`0 24 64`) for the Explore
+dialog. The colours are in [`../../tokens/windows.json`](../../tokens/windows.json).
+The focus ring is not a shadow token: it is built from `background` and `focus`
+(see the table above).
+
 ## Typography
+
+Diagnostic text uses the shared `mono` stack
+([`../03-typography.md`](../03-typography.md)); the app has no stack of its own.
 
 Segoe UI Variable per [`../03-typography.md`](../03-typography.md) — same type
 scale as macOS, only the font family changes. Screen title is 24/32/700

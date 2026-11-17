@@ -61,6 +61,11 @@ export function declarations(product) {
     add(`motion-${name}-duration`, `${value.duration}ms`);
     add(`motion-${name}-easing`, value.easing);
   }
+  // A shadow is one layer: no horizontal offset, a vertical offset, a blur and a colour.
+  for (const [name, value] of Object.entries(overlay.shadow || {})) {
+    if (!COLOR.test(value.color)) throw new Error(`shadow ${name} has an unsupported colour`);
+    add(`shadow-${name}`, `0 ${px(value.y, `shadow ${name} y`)} ${px(value.blur, `shadow ${name} blur`)} ${value.color}`);
+  }
   for (const [name, value] of Object.entries(overlay.window || {})) {
     if (Array.isArray(value)) {
       add(`window-${kebab(name)}-width`, px(value[0], `window ${name}`));

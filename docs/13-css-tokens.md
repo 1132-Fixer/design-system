@@ -25,7 +25,11 @@ One `:root` block of custom properties:
 | `--font-sans`, `--font-mono` | `tokens/typography.json` `fontStack` |
 | `--type-<role>-size`, `-line-height`, `-weight` | `tokens/typography.json` `scale` |
 | `--motion-<name>-duration`, `-easing` | `tokens/motion.json` |
+| `--shadow-<name>` | the product's `shadow`, when it has one |
 | `--window-<name>` | the product's `window`, when it has one |
+
+`--font-mono` is one stack for every product. Each computer uses the first
+font in the stack that it has, so no product needs a stack of its own.
 
 ## Rules
 

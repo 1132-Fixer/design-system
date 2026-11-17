@@ -19,7 +19,21 @@
     "success": "#2BC66D",
     "warning": "#F3B84A",
     "error": "#F05D67",
-    "overlay": "rgba(15,23,36,0.72)"
+    "overlay": "rgba(15,23,36,0.72)",
+    "explore-accent": "#3A82F7",
+    "explore-accent-text": "#8FB6F5",
+    "explore-hero-text": "#A9BEDE",
+    "explore-hero-start": "#1F2E4C",
+    "explore-hero-end": "#1B2740",
+    "explore-violet": "#7C6BF0",
+    "explore-purple": "#A855D6",
+    "explore-border": "rgba(122,148,190,0.34)"
+  },
+  "shadow": {
+    "sm": { "y": 6, "blur": 14, "color": "rgba(8,12,24,0.12)" },
+    "md": { "y": 10, "blur": 22, "color": "rgba(8,12,24,0.14)" },
+    "lg": { "y": 14, "blur": 28, "color": "rgba(8,12,24,0.16)" },
+    "dialog": { "y": 24, "blur": 64, "color": "rgba(0,0,0,0.46)" }
   },
   "radius": { "control": 10, "card": 14, "modal": 18, "pill": 999 },
   "spacing": { "4": 4, "8": 8, "12": 12, "16": 16, "20": 20, "24": 24, "32": 32, "40": 40 },

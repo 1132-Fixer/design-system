@@ -8,6 +8,7 @@
   "error":"#EF5350",
   "text-primary":"#F5F7FA",
   "text-secondary":"#9AA5B4",
+  "text-on-primary":"#FFFFFF",
   "border":"#33415A",
   "overlay":"rgba(15,23,36,0.72)",
   "gradient-brand-start":"#FFD24C",
