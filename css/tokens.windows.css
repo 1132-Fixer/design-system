@@ -73,7 +73,8 @@
   --window-default-height: 600px;
   --window-minimum-width: 440px;
   --window-minimum-height: 520px;
-  --window-header: 56px;
+  --window-header: 104px;
+  --window-header-mark: 80px;
   --window-footer: 48px;
   --window-content-max-width: 420px;
 }
